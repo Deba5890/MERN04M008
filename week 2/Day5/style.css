@@ -31,12 +31,12 @@
     flex-grow: 1;
 } */
 
-.box3 {
+ /* .box3 { */
     /* flex-shrink: 2; */
     /* flex-basis: 50px; */
 
     /* flex: 0 0 50px; */
-}
+
 
 .grid-area-container {
     width: 600px;
