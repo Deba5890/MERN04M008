@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PINQL Home</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .container {
+      width: 1200px;
+      background: #e9ded9;
+      border-radius: 30px;
+      padding: 40px 50px;
+      position: relative;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1c2c6b;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .signup {
+      border: 1px solid #ccc;
+      padding: 8px 18px;
+      border-radius: 10px;
+      background: #fff;
+    }
+
+    /* MAIN SECTION */
+    .main {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .left {
+      width: 55%;
+    }
+
+    .toggle {
+      display: inline-flex;
+      background: #fff;
+      border-radius: 20px;
+      padding: 4px;
+      margin-bottom: 20px;
+    }
+
+    .toggle span {
+      padding: 6px 14px;
+      font-size: 13px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .toggle .active {
+      background: #1c2c6b;
+      color: #fff;
+    }
+
+    h1 {
+      font-size: 56px;
+      color: #1c2c6b;
+      line-height: 1.1;
+      margin-bottom: 25px;
+    }
+
+    /* SEARCH BOX */
+    .search-box {
+      background: #fff;
+      border-radius: 14px;
+      padding: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .search-top {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .search-top input {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .search-btn {
+      background: #ff5a5f;
+      border: none;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .filters {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .filters select {
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 13px;
+      background: #f7f7f7;
+    }
+
+    /* RIGHT IMAGE */
+    .right {
+      width: 45%;
+      position: relative;
+    }
+
+    .right img {
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .main {
+        flex-direction: column;
+      }
+
+      .left, .right {
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <div class="logo">PINQL</div>
+
+      <div class="nav-links">
+        <a href="#">Discover</a>
+        <a href="#">Help</a>
+        <a href="#" class="signup">Sign up →</a>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <!-- LEFT CONTENT -->
+      <div class="left">
+
+        <div class="toggle">
+          <span class="active">Tenant</span>
+          <span>Landlord</span>
+        </div>
+
+        <h1>Find perfect home<br>for yourself.</h1>
+
+        <div class="search-box">
+          <div class="search-top">
+            <input type="text" placeholder="Country / Region / City / Postal code">
+            <button class="search-btn">Search</button>
+          </div>
+
+          <div class="filters">
+            <select><option>Property</option></select>
+            <select><option>Space</option></select>
+            <select><option>Rooms</option></select>
+            <select><option>Price</option></select>
+            <select><option>Interior</option></select>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="right">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="House Interior">
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
