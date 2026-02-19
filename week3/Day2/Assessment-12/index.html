@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HR Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <!-- Main Layout -->
+  <div class="flex h-screen">
+
+    <!-- Sidebar -->
+    <aside class="w-20 bg-indigo-900 text-white flex flex-col items-center py-4 space-y-6">
+      <div class="text-lg font-bold">HR</div>
+
+      <nav class="flex flex-col items-center space-y-6 text-xs">
+        <div class="flex flex-col items-center">
+          <span>🏠</span>
+          <p>Home</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <span>📅</span>
+          <p>Calendar</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <span>📁</span>
+          <p>Files</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <span>🏢</span>
+          <p>Companies</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <span>✅</span>
+          <p>Tasks</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <span>❓</span>
+          <p>FAQs</p>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Content Area -->
+    <main class="flex-1 p-8 overflow-y-auto">
+
+      <!-- Header -->
+      <div class="flex items-center justify-between mb-8">
+        <h1 class="text-3xl font-semibold text-gray-800">Services</h1>
+
+        <div class="flex items-center space-x-4">
+          <input
+            type="text"
+            placeholder="Search"
+            class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          />
+          <div class="w-10 h-10 rounded-full bg-green-400"></div>
+        </div>
+      </div>
+
+      <!-- Top Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-10">
+
+        <!-- Card -->
+        <div class="bg-gradient-to-r from-indigo-400 to-indigo-500 text-white rounded-2xl p-6 shadow-md">
+          <div class="flex items-center justify-between">
+            <div class="bg-white/30 w-16 h-16 rounded-full flex items-center justify-center text-2xl">🏠</div>
+            <span class="text-sm">14</span>
+          </div>
+          <h2 class="mt-6 text-lg font-semibold">Home</h2>
+        </div>
+
+        <div class="bg-gradient-to-r from-yellow-400 to-orange-400 text-white rounded-2xl p-6 shadow-md">
+          <div class="flex items-center justify-between">
+            <div class="bg-white/30 w-16 h-16 rounded-full flex items-center justify-center text-2xl">📅</div>
+            <span class="text-sm">5</span>
+          </div>
+          <h2 class="mt-6 text-lg font-semibold">Calendar</h2>
+        </div>
+
+        <div class="bg-gradient-to-r from-blue-400 to-blue-500 text-white rounded-2xl p-6 shadow-md">
+          <div class="flex items-center justify-between">
+            <div class="bg-white/30 w-16 h-16 rounded-full flex items-center justify-center text-2xl">📄</div>
+            <span class="text-sm">21</span>
+          </div>
+          <h2 class="mt-6 text-lg font-semibold">Files</h2>
+        </div>
+
+        <div class="bg-gradient-to-r from-pink-400 to-purple-400 text-white rounded-2xl p-6 shadow-md">
+          <div class="flex items-center justify-between">
+            <div class="bg-white/30 w-16 h-16 rounded-full flex items-center justify-center text-2xl">🏬</div>
+            <span class="text-sm">17</span>
+          </div>
+          <h2 class="mt-6 text-lg font-semibold">Companies</h2>
+        </div>
+      </div>
+
+      <!-- Service Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-6">
+
+        <!-- Item -->
+        <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-indigo-400 text-white flex items-center justify-center text-2xl">📝</div>
+          <p class="mt-4 font-medium">Tasks</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-indigo-400 text-white flex items-center justify-center text-2xl">❓</div>
+          <p class="mt-4 font-medium">FAQs</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-indigo-400 text-white flex items-center justify-center text-2xl">🎂</div>
+          <p class="mt-4 font-medium">Birthdays</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-indigo-400 text-white flex items-center justify-center text-2xl">⭐</div>
+          <p class="mt-4 font-medium">Favorites</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-indigo-400 text-white flex items-center justify-center text-2xl">🎉</div>
+          <p class="mt-4 font-medium">Company Parties</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-indigo-400 text-white flex items-center justify-center text-2xl">📆</div>
+          <p class="mt-4 font-medium">Schedule</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-indigo-400 text-white flex items-center justify-center text-2xl">🏁</div>
+          <p class="mt-4 font-medium">Goals</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-indigo-400 text-white flex items-center justify-center text-2xl">⏱</div>
+          <p class="mt-4 font-medium">Timelogs</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-indigo-400 text-white flex items-center justify-center text-2xl">📂</div>
+          <p class="mt-4 font-medium">Folders</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-indigo-400 text-white flex items-center justify-center text-2xl">👥</div>
+          <p class="mt-4 font-medium">Employees</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-indigo-400 text-white flex items-center justify-center text-2xl">🔔</div>
+          <p class="mt-4 font-medium">Notifications</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-indigo-400 text-white flex items-center justify-center text-2xl">📰</div>
+          <p class="mt-4 font-medium">News</p>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+</body>
+</html>
