@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+body{
+background:#f5f5f7;
+}
+
+/* navbar */
+#navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 80px;
+    background:white;
+}
+
+.logo h2{
+color:#2b5cff;
+font-size:28px;
+}
+
+.nav-links a{
+margin:0 15px;
+text-decoration:none;
+color:#333;
+font-size:16px;
+}
+
+.nav-buttons button{
+margin-left:10px;
+padding:10px 20px;
+border-radius:25px;
+border:none;
+cursor:pointer;
+}
+
+.language{
+border:1px solid #2b5cff;
+background:white;
+color:#2b5cff;
+}
+
+.download{
+background:#2b5cff;
+color:white;
+}
