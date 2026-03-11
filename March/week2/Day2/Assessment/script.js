@@ -75,7 +75,7 @@ console.log(replaceSpace(sentence));
 
 //10.what is the Higher order Function explain any add some example ?
 //A function which accepts a function as a parameter is known as HOF It is used to perform multiple operations with different values.
-
+// example
 let numbers2 = [1, 2, 3, 4];
 
 let result3 = numbers2.map(function(num){
