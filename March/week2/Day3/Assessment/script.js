@@ -40,7 +40,6 @@ console.log(result7);
 
 //9.Find the minimum number in an array.
 let arr8 = [10, 5, 8, 2, 15];
-
 let min = arr8.reduce((acc, curr) => {
   return curr < acc ? curr : acc;
 });
@@ -52,8 +51,7 @@ let result3 = words3.every(word => word.length > 3);
 console.log(result3);
 
 //11.Check if any word starts with the letter "a".
+
 let words6 = ["banana", "apple", "grape", "mango"];
-
 let result6 = words6.some(word => word.startsWith("a"));
-
 console.log(result6);

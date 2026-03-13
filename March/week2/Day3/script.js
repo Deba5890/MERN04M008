@@ -14,7 +14,6 @@ arr.forEach((v, i) => {
 // })
 
 let updateArr = arr.map(v => v + 2)
-
 console.log(updateArr)
 console.log(arr)
 
@@ -93,7 +92,3 @@ let nArr = [1, 2, 3, 2, 3, 4, 5, 6, 7, 6];
 
 let distinctArr = nArr.filter((v, i) => nArr.indexOf(v) === i);
 console.log(distinctArr)
-
-
-
-
