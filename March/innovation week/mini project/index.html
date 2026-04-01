@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dominos app</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<div class="flex justify-end gap-3 p-3 bg-white shadow">
+
+<a href="Register.html">
+  <button class="bg-red-500 text-white px-4 py-1 rounded">
+    Register
+  </button>
+</a>
+
+<a href="login.html">
+  <button class="bg-red-500 text-white px-4 py-1 rounded">
+    login
+  </button>
+</a>
+
+<a href="cart.html">
+  <button class="bg-red-500 text-white px-4 py-1 rounded">
+    cart🛒
+  </button>
+</a>
+  </div>
+
+<!-- OVERLAY -->
+<div id="overlay" 
+class="fixed inset-0 bg-black/40 hidden z-40"
+onclick="closeMenu()"></div>
+
+<!-- HEADER -->
+<div class="bg-white p-3 shadow flex justify-between items-center">
+  <div>
+    <p class="text-red-500 font-semibold">No Location</p>
+    <p class="text-xs text-gray-500">Exact Location Required!</p>
+  </div>
+  <button class="bg-blue-600 text-white px-3 py-1 rounded text-xs">
+    Detect
+  </button>
+</div>
+
+<!-- TABS -->
+<div class="flex bg-white text-center">
+  <div class="flex-1 p-3 border-b-4 border-black font-bold">Delivery</div>
+  <div class="flex-1 p-3 text-gray-500">Takeaway</div>
+  <div class="flex-1 p-3 text-gray-500">Dine-in</div>
+</div>
+
+<!-- OFFER -->
+<div class="bg-white p-4">
+  <h2 class="text-lg font-bold mb-3">Offers for you</h2>
+  <div class="flex gap-3 overflow-x-auto">
+    <div class="min-w-[300px] flex items-center justify-between 
+                bg-gradient-to-r from-blue-700 to-blue-500 
+                text-white p-4 rounded-xl shadow">
+
+      <div class="flex items-start gap-3">
+        <div class="bg-white/20 p-2 rounded-lg">⭐</div>
+        <div>
+          <p class="font-bold">Get ₹30 OFF</p>
+          <p class="text-sm text-blue-100">
+            Up to ₹30 Off on orders of ₹199 or more
+          </p>
+        </div>
+      </div>
+
+      <button class="border border-white px-4 py-1 rounded-lg text-sm">
+        View
+      </button>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- CATEGORY -->
+<!-- What are you craving for -->
+ <div id="productItems" class="p-4"></div>
+<div class="bg-white p-4 mt-2">
+
+<h2 class="text-lg font-bold mb-3">What are you craving for?</h2>
+
+  <!-- Scroll Row -->
+  <div class="flex gap-5 overflow-x-auto">
+
+    <!-- ITEM -->
+    <div class="text-center min-w-[85px] relative">
+
+      <!-- Badge -->
+      <span class="absolute top-0 left-1 bg-yellow-400 text-[10px] px-1 rounded">
+        NEW
+      </span>
+
+      <!-- Image -->
+      <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/CategoriesV1/2387751d-744a-4e62-b84a-fd8b5eea8c5c_CheeseLavaPullApart.png?ver=V0.0.1"
+        class="w-16 h-16 rounded-full object-cover border-2 border-gray-200 shadow">
+
+      <!-- Text -->
+      <p class="text-xs mt-2 font-medium">Cheese Lava</p>
+    </div>
+
+    <!-- ITEM -->
+    <div class="text-center min-w-[85px] relative">
+
+      <span class="absolute top-0 left-1 bg-yellow-400 text-[10px] px-1 rounded">
+        6 in 1
+      </span>
+
+      <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/CategoriesV1/ffabe9c9-6786-4501-8f16-f328cf9b7a8d_BigBigPizza_Normal.png?ver=V0.0.1"
+        class="w-16 h-16 rounded-full object-cover border-2 border-gray-200 shadow">
+
+      <p class="text-xs mt-2 font-medium">Big Big Pizza</p>
+    </div>
+
+    <!-- ITEM -->
+    <div class="text-center min-w-[85px]">
+      <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/CategoriesV1/23bced69-47ec-48ea-89d7-1b5a68d29bb6_VegPizza.png?ver=V0.0.1"
+        class="w-16 h-16 rounded-full object-cover border-2 border-gray-200 shadow">
+      <p class="text-xs mt-2 font-medium">Veg Pizza</p>
+    </div>
+
+    <!-- ITEM -->
+    <div class="text-center min-w-[85px]">
+      <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/CategoriesV1/256103bc-8a01-4637-86b3-d9e63e5aab26_PizzaManianew.png?ver=V0.0.1"
+        class="w-16 h-16 rounded-full object-cover border-2 border-gray-200 shadow">
+      <p class="text-xs mt-2 font-medium">Pizza Mania</p>
+    </div>
+
+    <!-- ITEM -->
+    <div class="text-center min-w-[85px]">
+      <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/CategoriesV1/76ea3002-6964-4834-9d90-bb602184577c_garlicbread.jpg?ver=V0.0.1"
+        class="w-16 h-16 rounded-full object-cover border-2 border-gray-200 shadow">
+      <p class="text-xs mt-2 font-medium">Garlic Bread & Dips</p>
+    </div>
+
+    <!-- ITEM -->
+    <div class="text-center min-w-[85px]">
+      <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/CategoriesV1/5ee24e9d-bfae-47c0-ad1e-5fb6bb79879e_cheeseburst.jpg?ver=V0.0.1"
+        class="w-16 h-16 rounded-full object-cover border-2 border-gray-200 shadow">
+      <p class="text-xs mt-2 font-medium">Cheese Burst Pizza</p>
+    </div>
+
+    <!-- ITEM -->
+    <div class="text-center min-w-[85px]">
+      <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/CategoriesV1/e396c20d-5eb1-42a3-8abf-98cac7d51d84_LoadedSaucyRange.png?ver=V0.0.1"
+        class="w-16 h-16 rounded-full object-cover border-2 border-gray-200 shadow">
+      <p class="text-xs mt-2 font-medium">Crazy Deals</p>
+    </div>
+
+    <!-- ITEM -->
+    <div class="text-center min-w-[85px]">
+      <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/CategoriesV1/d4426039-5b76-45a9-8940-fc268f2fbab5_cheesevolcano.jpg?ver=V0.0.1"
+        class="w-16 h-16 rounded-full object-cover border-2 border-gray-200 shadow">
+      <p class="text-xs mt-2 font-medium">Cheese Volcano</p>
+    </div>
+
+    <!-- ITEM -->
+    <div class="text-center min-w-[85px]">
+      <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/CategoriesV1/09d84743-6fb5-42eb-9ced-43b68fba3986_olddesertssss.png?ver=V0.0.1"
+        class="w-16 h-16 rounded-full object-cover border-2 border-gray-200 shadow">
+      <p class="text-xs mt-2 font-medium">Desserts</p>
+    </div>
+
+     <!-- ITEM -->
+    <div class="text-center min-w-[85px]">
+      <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/CategoriesV1/ef4bdd28-8ff9-47e8-8879-bf04b8f20850_BestSellerrs.png?ver=V0.0.1"
+        class="w-16 h-16 rounded-full object-cover border-2 border-gray-200 shadow">
+      <p class="text-xs mt-2 font-medium">Recommended</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- What's New -->
+<div class="p-4">
+
+  <h2 class="text-lg font-bold mb-3">What's New</h2>
+
+  <!-- Scroll Row -->
+  <div class="flex gap-4 overflow-x-auto">
+
+    <!-- Banner 1 -->
+    <div class="min-w-[260px] rounded-xl overflow-hidden shadow relative">
+      <img src="https://api.dominos.co.in/prod-olo-api/images/dynamicOffers/Sunday_Special_offers_AC_202410201729399304_202410211729485978_202410221729573259_202411201732090902_202412261735198159_202503181742280842_202503181742280870.jpg?ver=0.0.1"
+        class="w-full h-36 object-cover">
+
+      <!-- Overlay Text -->
+      <div class="absolute bottom-2 left-2 text-white">
+      </div>
+    </div>
+
+    <!-- Banner 2 -->
+    <div class="min-w-[260px] rounded-xl overflow-hidden shadow relative">
+      <img src="https://api.dominos.co.in/prod-olo-api/images/dynamicOffers/Dominos_Cheese-Burst-AC_202410241729754536.JPG?ver=0.0.1"
+        class="w-full h-36 object-cover">
+
+      <div class="absolute bottom-2 left-2 text-white">
+      </div>
+    </div>
+
+    <!-- Banner 3 -->
+    <div class="min-w-[260px] rounded-xl overflow-hidden shadow relative">
+      <img src="https://api.dominos.co.in/prod-olo-api/images/dynamicOffers/Domino%2527s_cheese-volcano-revamp_AC_202409301727679855_202411081731063825.jpg?ver=0.0.1"
+        class="w-full h-36 object-cover">
+
+      <div class="absolute bottom-2 left-2 text-white">
+      </div>
+    </div>
+
+    <!-- Banner-4 -->
+    <div class="min-w-[260px] rounded-xl overflow-hidden shadow">
+      <img 
+        src="https://api.dominos.co.in/prod-olo-api/images/dynamicOffers/Chocolava_KV_App_Carousel_400x220px_202409301727679882_202410011727758996_202410011727766705_202410091728451033_202410151728996299_202410161729071005_202410241729754696_202411071730957121_202503181742281735_202503191742361186.jpg?ver=0.0.1"
+        class="w-full h-36 object-cover">
+    </div class="absolute bottom-2 left-2 text-white">
+  </div>
+</div>
+
+  </div>
+</div>
+
+<!-- Top 10 Bestsellers -->
+<div class="bg-[#f7f3ea] py-4">
+
+  <!-- Header -->
+  <div class="text-center mb-3">
+    <p class="text-yellow-600 font-semibold text-sm">👑 Top 10 Bestsellers</p>
+    <p class="text-xs text-gray-500">📍 In Your Locality</p>
+  </div>
+
+  <!-- Scroll Row -->
+  <div class="flex gap-4 overflow-x-auto px-3">
+
+    <!-- CARD -->
+    <div class="min-w-[220px] rounded-xl overflow-hidden shadow relative">
+
+      <!-- TOP 10 Ribbon -->
+      <div class="absolute top-2 right-2 bg-yellow-400 text-[10px] px-2 py-[2px] rounded font-bold">
+        TOP 10
+      </div>
+
+      <!-- Image -->
+      <img src="https://images.dominos.co.in/new_margherita.jpg"
+        class="w-full h-40 object-cover">
+
+      <!-- Gradient Overlay -->
+      <div class="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent p-2">
+
+        <!-- Name -->
+        <p class="text-white text-sm font-semibold">Margherita</p>
+
+        <!-- Description -->
+        <p class="text-gray-300 text-[10px]">
+          Classic delight with mozzarella cheese
+        </p>
+
+        <!-- Bottom Row -->
+        <div class="flex justify-between items-center mt-2">
+
+          <!-- Price -->
+          <div class="text-white text-sm font-bold">₹109</div>
+
+          <!-- Add Button -->
+         <button onclick="addToCart('Margherita', 109)"
+  class="bg-red-500 text-white px-3 py-1 text-xs rounded">
+  Add +
+</button>
+
+        </div>
+
+      </div>
+
+      <!-- Customize Tag -->
+      <div class="absolute bottom-16 right-2 bg-gray-700 text-white text-[10px] px-2 py-[2px] rounded">
+        Customize
+      </div>
+
+    </div>
+
+    <!-- COPY MORE CARDS -->
+    <!-- Farmhouse -->
+    <div class="min-w-[220px] rounded-xl overflow-hidden shadow relative">
+
+      <div class="absolute top-2 right-2 bg-yellow-400 text-[10px] px-2 py-[2px] rounded font-bold">
+        TOP 10
+      </div>
+
+      <img src="https://images.dominos.co.in/farmhouse.png"
+        class="w-full h-40 object-cover">
+
+      <div class="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent p-2">
+        <p class="text-white text-sm font-semibold">Farmhouse</p>
+        <p class="text-gray-300 text-[10px]">
+          Onion, capsicum, tomato & grilled mushroom
+        </p>
+
+        <div class="flex justify-between items-center mt-2">
+          <div class="text-white text-sm font-bold">₹259</div>
+       <button onclick="addToCart('Farmhouse', 259)" 
+class="bg-red-500 text-white px-3 py-1 text-xs rounded relative z-20"
+style="pointer-events:auto;">
+  Add +
+</button>
+        </div>
+      </div>
+
+      <div class="absolute bottom-16 right-2 bg-gray-700 text-white text-[10px] px-2 py-[2px] rounded">
+        Customize
+      </div>
+
+    </div>
+
+
+    <div class="min-w-[220px] rounded-xl overflow-hidden shadow relative">
+
+      <div class="absolute top-2 right-2 bg-yellow-400 text-[10px] px-2 py-[2px] rounded font-bold">
+        TOP 10
+      </div>
+
+      <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/a542d031-5fc8-4902-bbb3-25eebd3ace7e_veggie_paradise_side.webp?ver=V0.0.1"
+        class="w-full h-40 object-cover">
+
+      <div class="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent p-2">
+        <p class="text-white text-sm font-semibold">Veggie Paradise</p>
+        <p class="text-gray-300 text-[10px]">
+          golden corn, black olives, capsicum , red paplika
+        </p>
+
+        <div class="flex justify-between items-center mt-2">
+          <div class="text-white text-sm font-bold">₹269</div>
+            <button onclick="addToCart('Veggie Paradise', 269)" 
+         class="bg-red-500 text-white px-3 py-1 text-xs rounded">
+                 Add +
+          </button>
+        </div>
+      </div>
+
+      <div class="absolute bottom-16 right-2 bg-gray-700 text-white text-[10px] px-2 py-[2px] rounded">
+        Customize
+      </div>
+    </div>
+
+    
+    <div class="min-w-[220px] rounded-xl overflow-hidden shadow relative">
+
+      <div class="absolute top-2 right-2 bg-yellow-400 text-[10px] px-2 py-[2px] rounded font-bold">
+        TOP 10
+      </div>
+
+      <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/8abd61ff-024b-45fe-a221-6b72d601cb49_indi_paneer_side_full.webp?ver=V0.0.1"
+        class="w-full h-40 object-cover">
+
+      <div class="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent p-2">
+        <p class="text-white text-sm font-semibold">Indi Tandoor Paneer</p>
+        <p class="text-gray-300 text-[10px]">
+          Tandoori Panneer With capsium , red paprika and mint mayo
+        </p>
+
+        <div class="flex justify-between items-center mt-2">
+          <div class="text-white text-sm font-bold">₹319</div>
+            <button onclick="addToCart('Indi Tandoor Paneer', 319)" 
+         class="bg-red-500 text-white px-3 py-1 text-xs rounded">
+                 Add +
+          </button>
+        </div>
+      </div>
+
+      <div class="absolute bottom-16 right-2 bg-gray-700 text-white text-[10px] px-2 py-[2px] rounded">
+        Customize
+      </div>
+    </div>
+    
+
+     <div class="min-w-[220px] rounded-xl overflow-hidden shadow relative">
+
+      <div class="absolute top-2 right-2 bg-yellow-400 text-[10px] px-2 py-[2px] rounded font-bold">
+        TOP 10
+      </div>
+
+      <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/8abd61ff-024b-45fe-a221-6b72d601cb49_indi_paneer_side_full.webp?ver=V0.0.1"
+        class="w-full h-40 object-cover">
+
+      <div class="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent p-2">
+        <p class="text-white text-sm font-semibold">Cheese n Corn</p>
+        <p class="text-gray-300 text-[10px]">
+          A delectable Combination of Sweet & juicy golden corn
+        </p>
+
+        <div class="flex justify-between items-center mt-2">
+          <div class="text-white text-sm font-bold">₹209</div>
+          <button onclick="addToCart('Cheese n Corn', 209)" 
+           class="bg-red-500 text-white px-3 py-1 text-xs rounded">
+                 Add +
+          </button>
+        </div>
+      </div>
+
+      <div class="absolute bottom-16 right-2 bg-gray-700 text-white text-[10px] px-2 py-[2px] rounded">
+        Customize
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Top 10 Bestsellers -->
+<div class="bg-[#f7f3ea] py-4">
+
+  <!-- Header -->
+  <div class="text-center mb-3">
+    <p class="text-yellow-600 font-semibold text-sm">👑 Top 10 Bestsellers</p>
+    <p class="text-xs text-gray-500">📍 In Your Locality</p>
+  </div>
+
+  <!-- Scroll Row -->
+  <div class="flex gap-4 overflow-x-auto px-3">
+
+    <!-- CARD -->
+    <div class="min-w-[220px] rounded-xl overflow-hidden shadow relative">
+
+      <!-- TOP 10 Ribbon -->
+      <div class="absolute top-2 right-2 bg-yellow-400 text-[10px] px-2 py-[2px] rounded font-bold">
+        TOP 10
+      </div>
+
+      <!-- Image -->
+      <img src="https://images.dominos.co.in/new_margherita.jpg"
+        class="w-full h-40 object-cover">
+
+      <!-- Gradient Overlay -->
+      <div class="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent p-2">
+
+        <!-- Name -->
+        <p class="text-white text-sm font-semibold">Margherita</p>
+
+        <!-- Description -->
+        <p class="text-gray-300 text-[10px]">
+          Classic delight with mozzarella cheese
+        </p>
+
+        <!-- Bottom Row -->
+        <div class="flex justify-between items-center mt-2">
+
+          <!-- Price -->
+          <div class="text-white text-sm font-bold">₹109</div>
+
+          <!-- Add Button -->
+           <button onclick="addToCart('Margherita', 109)" 
+         class="bg-red-500 text-white px-3 py-1 text-xs rounded">
+                 Add +
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- Customize Tag -->
+      <div class="absolute bottom-16 right-2 bg-gray-700 text-white text-[10px] px-2 py-[2px] rounded">
+        Customize
+      </div>
+
+    </div>
+
+    <!-- COPY MORE CARDS -->
+    <!-- Farmhouse -->
+    <div class="min-w-[220px] rounded-xl overflow-hidden shadow relative">
+
+      <div class="absolute top-2 right-2 bg-yellow-400 text-[10px] px-2 py-[2px] rounded font-bold">
+        TOP 10
+      </div>
+
+      <img src="https://images.dominos.co.in/farmhouse.png"
+        class="w-full h-40 object-cover">
+
+      <div class="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent p-2">
+        <p class="text-white text-sm font-semibold">Farmhouse</p>
+        <p class="text-gray-300 text-[10px]">
+          Onion, capsicum, tomato & grilled mushroom
+        </p>
+
+        <div class="flex justify-between items-center mt-2">
+          <div class="text-white text-sm font-bold">₹259</div>
+           <button onclick="addToCart('Farmhouse', 259)" 
+         class="bg-red-500 text-white px-3 py-1 text-xs rounded">
+                 Add +
+          </button>
+        </div>
+      </div>
+
+      <div class="absolute bottom-16 right-2 bg-gray-700 text-white text-[10px] px-2 py-[2px] rounded">
+        Customize
+      </div>
+
+    </div>
+
+
+    <div class="min-w-[220px] rounded-xl overflow-hidden shadow relative">
+
+      <div class="absolute top-2 right-2 bg-yellow-400 text-[10px] px-2 py-[2px] rounded font-bold">
+        TOP 10
+      </div>
+
+      <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/a542d031-5fc8-4902-bbb3-25eebd3ace7e_veggie_paradise_side.webp?ver=V0.0.1"
+        class="w-full h-40 object-cover">
+
+      <div class="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent p-2">
+        <p class="text-white text-sm font-semibold">Veggie Paradise</p>
+        <p class="text-gray-300 text-[10px]">
+          golden corn, black olives, capsicum , red paplika
+        </p>
+
+        <div class="flex justify-between items-center mt-2">
+          <div class="text-white text-sm font-bold">₹269</div>
+            <button onclick="addToCart('Veggie Paradise', 269)" 
+         class="bg-red-500 text-white px-3 py-1 text-xs rounded">
+                 Add +
+          </button>
+        </div>
+      </div>
+
+      <div class="absolute bottom-16 right-2 bg-gray-700 text-white text-[10px] px-2 py-[2px] rounded">
+        Customize
+      </div>
+    </div>
+
+    
+    <div class="min-w-[220px] rounded-xl overflow-hidden shadow relative">
+
+      <div class="absolute top-2 right-2 bg-yellow-400 text-[10px] px-2 py-[2px] rounded font-bold">
+        TOP 10
+      </div>
+
+      <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/8abd61ff-024b-45fe-a221-6b72d601cb49_indi_paneer_side_full.webp?ver=V0.0.1"
+        class="w-full h-40 object-cover">
+
+      <div class="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent p-2">
+        <p class="text-white text-sm font-semibold">Indi Tandoor Paneer</p>
+        <p class="text-gray-300 text-[10px]">
+          Tandoori Panneer With capsium , red paprika and mint mayo
+        </p>
+
+        <div class="flex justify-between items-center mt-2">
+          <div class="text-white text-sm font-bold">₹319</div>
+           <button onclick="addToCart('Indi Tandoor Paneer', 319)" 
+         class="bg-red-500 text-white px-3 py-1 text-xs rounded">
+                 Add +
+          </button>
+        </div>
+      </div>
+
+      <div class="absolute bottom-16 right-2 bg-gray-700 text-white text-[10px] px-2 py-[2px] rounded">
+        Customize
+      </div>
+    </div>
+    
+
+     <div class="min-w-[220px] rounded-xl overflow-hidden shadow relative">
+
+      <div class="absolute top-2 right-2 bg-yellow-400 text-[10px] px-2 py-[2px] rounded font-bold">
+        TOP 10
+      </div>
+
+      <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/8abd61ff-024b-45fe-a221-6b72d601cb49_indi_paneer_side_full.webp?ver=V0.0.1"
+        class="w-full h-40 object-cover">
+
+      <div class="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent p-2">
+        <p class="text-white text-sm font-semibold">Cheese n Corn</p>
+        <p class="text-gray-300 text-[10px]">
+          A delectable Combination of Sweet & juicy golden corn
+        </p>
+
+        <div class="flex justify-between items-center mt-2">
+          <div class="text-white text-sm font-bold">₹209</div>
+            <button onclick="addToCart('Cheese n Corn', 209)" 
+         class="bg-red-500 text-white px-3 py-1 text-xs rounded">
+                 Add +
+          </button>
+        </div>
+      </div>
+
+      <div class="absolute bottom-16 right-2 bg-gray-700 text-white text-[10px] px-2 py-[2px] rounded">
+        Customize
+      </div>
+    </div>
+  </div>
+    </div>
+
+<!-- Popular Veg Delights -->
+<div class="p-4">
+
+  <!-- Heading -->
+  <div class="flex items-center gap-2 mb-3">
+    <span class="text-yellow-500 text-xl">🏅</span>
+    <div>
+      <h2 class="font-bold text-lg">Popular Veg Delights</h2>
+      <p class="text-xs text-gray-500">
+        FREE Delivery For Orders Above ₹149
+      </p>
+    </div>
+  </div>
+
+  <!-- Horizontal Scroll -->
+  <div class="flex gap-4 overflow-x-auto">
+
+    <!-- CARD -->
+    <div class="min-w-[240px] relative rounded-xl overflow-hidden shadow">
+
+      <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/05e8ba85-4444-4c19-b085-8012f1baf0b4_margherita_side.webp?ver=V0.0.1"
+        class="w-full h-40 object-cover">
+
+      <!-- Overlay -->
+      <div class="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent p-3">
+
+        <p class="text-white font-bold text-sm">Margherita</p>
+        <p class="text-gray-300 text-[10px]">
+          Classic delight with mozzarella cheese
+        </p>
+
+        <div class="flex justify-between items-center mt-2">
+          <span class="text-white font-bold text-sm">₹109</span>
+           <button onclick="addToCart('Margherita', 109)" 
+         class="bg-red-500 text-white px-3 py-1 text-xs rounded">
+                 Add +
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Customize -->
+      <div class="absolute top-2 right-2 bg-gray-700 text-white text-[10px] px-2 py-1 rounded">
+        Customize
+      </div>
+
+    </div>
+
+    <!-- CARD -->
+    <div class="min-w-[240px] relative rounded-xl overflow-hidden shadow">
+
+      <img src="https://images.unsplash.com/photo-1594007654729-407eedc4be65"
+        class="w-full h-40 object-cover">
+
+      <div class="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent p-3">
+        <p class="text-white font-bold text-sm">Farmhouse</p>
+        <p class="text-gray-300 text-[10px]">
+          Onion, capsicum, tomato & mushroom
+        </p>
+
+        <div class="flex justify-between items-center mt-2">
+          <span class="text-white font-bold text-sm">₹259</span>
+            <button onclick="addToCart('Farmhouse', 259)" 
+         class="bg-red-500 text-white px-3 py-1 text-xs rounded">
+                 Add +
+          </button>
+        </div>
+      </div>
+
+      <div class="absolute top-2 right-2 bg-gray-700 text-white text-[10px] px-2 py-1 rounded">
+        Customize
+      </div>
+
+    </div>
+
+    <!-- CARD -->
+    <div class="min-w-[240px] relative rounded-xl overflow-hidden shadow">
+
+      <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/ff2e39b8-87cc-4f3f-a2f5-06198a85f3df_peppy_paneer_side.webp?ver=V0.0.1"
+        class="w-full h-40 object-cover">
+
+      <div class="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent p-3">
+        <p class="text-white font-bold text-sm">Peppy Paneer</p>
+        <p class="text-gray-300 text-[10px]">
+          Paneer with capsicum & paprika
+        </p>
+
+        <div class="flex justify-between items-center mt-2">
+          <span class="text-white font-bold text-sm">₹269</span>
+           <button onclick="addToCart('Peppy Paneer', 269)" 
+         class="bg-red-500 text-white px-3 py-1 text-xs rounded">
+                 Add +
+          </button>
+        </div>
+      </div>
+
+      <div class="absolute top-2 right-2 bg-gray-700 text-white text-[10px] px-2 py-1 rounded">
+        Customize
+      </div>
+    </div>
+
+     <div class="min-w-[240px] relative rounded-xl overflow-hidden shadow">
+
+      <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/a542d031-5fc8-4902-bbb3-25eebd3ace7e_veggie_paradise_side.webp?ver=V0.0.1"
+        class="w-full h-40 object-cover">
+
+      <div class="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent p-3">
+        <p class="text-white font-bold text-sm">Veggie Paradise</p>
+        <p class="text-gray-300 text-[10px]">
+          Golden corn,black olives,capsicum,red paprika
+        </p>
+
+        <div class="flex justify-between items-center mt-2">
+          <span class="text-white font-bold text-sm">₹269</span>
+           <button onclick="addToCart('Veggie Paradise', 269)" 
+         class="bg-red-500 text-white px-3 py-1 text-xs rounded">
+                 Add +
+          </button>
+        </div>
+      </div>
+
+      <div class="absolute top-2 right-2 bg-gray-700 text-white text-[10px] px-2 py-1 rounded">
+        Customize
+      </div>
+    </div>
+
+    
+     <div class="min-w-[240px] relative rounded-xl overflow-hidden shadow">
+
+      <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/a542d031-5fc8-4902-bbb3-25eebd3ace7e_veggie_paradise_side.webp?ver=V0.0.1"
+        class="w-full h-40 object-cover">
+
+      <div class="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent p-3">
+        <p class="text-white font-bold text-sm">Indi Tandoori Paneer</p>
+        <p class="text-gray-300 text-[10px]">
+          Tandoori paneer with capsicum,red paprika & mint mayo
+        </p>
+
+        <div class="flex justify-between items-center mt-2">
+          <span class="text-white font-bold text-sm">₹319</span>
+           <button onclick="addToCart('Indi Tandoori Paneer', 319)" 
+         class="bg-red-500 text-white px-3 py-1 text-xs rounded">
+                 Add +
+          </button>
+        </div>
+      </div>
+
+      <div class="absolute top-2 right-2 bg-gray-700 text-white text-[10px] px-2 py-1 rounded">
+        Customize
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Garlic Breads & Dips -->
+<div class="p-4">
+
+  <!-- Heading -->
+  <h2 class="font-bold text-lg mb-3">Garlic Breads & Dips</h2>
+
+  <!-- Horizontal Scroll -->
+  <div class="flex gap-4 overflow-x-auto">
+
+    <!-- CARD -->
+    <div class="min-w-[200px] bg-white rounded-xl shadow overflow-hidden">
+
+      <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/a718c4d8-de90-476b-b9fc-7e6b42fc6ffe_plain_GB_side.webp?ver=V0.0.1"
+        class="w-full h-32 object-cover">
+
+      <div class="p-3">
+
+        <p class="font-semibold text-sm">Garlic Breadsticks</p>
+        <p class="text-xs text-gray-500">
+          Freshly baked bread with garlic flavor
+        </p>
+
+        <div class="flex justify-between items-center mt-2">
+          <span class="font-bold">₹119</span>
+           <button onclick="addToCart('Garlic Breadsticks', 119)" 
+         class="bg-red-500 text-white px-3 py-1 text-xs rounded">
+                 Add +
+          </button>
+        </div>
+
+      </div>
+
+      
+
+    </div>
+
+    <!-- CARD -->
+    <div class="min-w-[200px] bg-white rounded-xl shadow overflow-hidden">
+
+      <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d"
+        class="w-full h-32 object-cover">
+
+      <div class="p-3">
+        <p class="font-semibold text-sm">Stuffed Garlic Bread</p>
+        <p class="text-xs text-gray-500">
+          Stuffed with cheese & veggies
+        </p>
+
+        <div class="flex justify-between items-center mt-2">
+          <span class="font-bold">₹169</span>
+          <button onclick="addToCart('Stuffed Garlic Bread', 169)" 
+         class="bg-red-500 text-white px-3 py-1 text-xs rounded">
+                 Add +
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CARD -->
+    <div class="min-w-[200px] bg-white rounded-xl shadow overflow-hidden">
+
+      <img src="https://images.unsplash.com/photo-1585238342024-78d387f4a707"
+        class="w-full h-32 object-cover">
+
+      <div class="p-3">
+        <p class="font-semibold text-sm">Cheesy Dip</p>
+        <p class="text-xs text-gray-500">
+          Creamy cheese dip
+        </p>
+
+        <div class="flex justify-between items-center mt-2">
+          <span class="font-bold">₹29</span>
+           <button onclick="addToCart('Cheesy Dip', 29)" 
+         class="bg-red-500 text-white px-3 py-1 text-xs rounded">
+                 Add +
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CARD -->
+    <div class="min-w-[200px] bg-white rounded-xl shadow overflow-hidden">
+
+      <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/a1b4e8c0-3cb5-44f2-b6e3-68ad58ce6ff2_zingy_parcel_v_side.webp?ver=V0.0.1"
+        class="w-full h-32 object-cover">
+
+      <div class="p-3">
+        <p class="font-semibold text-sm">Veg Parcel</p>
+        <p class="text-xs text-gray-500">
+          Crispy parcel stuffed with veggies
+        </p>
+
+        <div class="flex justify-between items-center mt-2">
+          <span class="font-bold">₹49</span>
+            <button onclick="addToCart('Veg Parcel', 49)" 
+         class="bg-red-500 text-white px-3 py-1 text-xs rounded">
+                 Add +
+          </button>
+        </div>
+      </div>
+    </div>
+
+ <!-- CARD -->
+    <div class="min-w-[200px] bg-white rounded-xl shadow overflow-hidden">
+
+      <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/936e255f-57b3-493b-b754-964045a6024a_veg_taco_side.webp?ver=V0.0.1 "
+       class="w-full h-32 object-cover">
+
+      <div class="p-3">
+        <p class="font-semibold text-sm">Taco Maxicana Veg</p>
+        <p class="text-xs text-gray-500">
+          Crispy taco with veg patty & creamy harissa sauce.
+        </p>
+
+        <div class="flex justify-between items-center mt-2">
+          <span class="font-bold">₹139</span>
+           <button onclick="addToCart('Taco Maxicana Veg', 139)" 
+         class="bg-red-500 text-white px-3 py-1 text-xs rounded">
+                 Add +
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- Bottom Navigation -->
+<div class="fixed bottom-0 w-full bg-white border-t flex justify-around items-center py-2 shadow">
+
+  <!-- Menu -->
+  <button class="flex flex-col items-center text-blue-600">
+    <span class="text-lg">🍕</span>
+    <span class="text-xs font-semibold">Menu</span>
+  </button>
+
+  <!-- Offers -->
+  <button class="flex flex-col items-center text-gray-500">
+    <span class="text-lg">🏷️</span>
+    <span class="text-xs">Offers</span>
+  </button>
+
+</div>
+
+
+<!-- STICKY CART -->
+<div id="cartBar" class="hidden fixed bottom-0 w-full bg-green-600 text-white p-3 flex justify-between">
+  <span id="cartCount"></span>
+  <button onclick="goToCart()">View Cart</button>
+</div>
+
+<script src="script.js"></script>
+<script src="cart.js"></script>
+  
+</body>
+</html>

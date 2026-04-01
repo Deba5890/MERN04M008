@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+<!-- CARD -->
+<div class="bg-white w-[350px] p-6 rounded-xl shadow">
+
+  <h2 class="text-xl font-bold mb-4 text-center">Create Account</h2>
+
+  <!-- FORM -->
+  <form onsubmit="registerUser(event)" class="space-y-3">
+
+    <input id="name" type="text" placeholder="Full Name"
+      class="w-full border p-2 rounded focus:outline-blue-500">
+
+    <input id="phone" type="text" placeholder="Mobile Number"
+      class="w-full border p-2 rounded focus:outline-blue-500">
+
+    <input id="email" type="email" placeholder="Email"
+      class="w-full border p-2 rounded focus:outline-blue-500">
+
+    <input id="password" type="password" placeholder="Password"
+      class="w-full border p-2 rounded focus:outline-blue-500">
+
+    <button class="w-full bg-red-500 text-white py-2 rounded font-semibold">
+      Register
+    </button>
+
+  </form>
+
+  <!-- LOGIN LINK -->
+  <p class="text-sm text-center mt-3">
+    Already have an account?
+    <a href="Register.html" class="text-blue-600">Login</a>
+
+  </p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
